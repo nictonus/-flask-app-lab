@@ -1,0 +1,37 @@
+<style>
+        {% if request.cookies.get('color_scheme') == 'dark' %}
+            body {
+                background-color: #343a40;
+                color: white; /* Зміна кольору тексту для темної теми */
+            }
+            .bg-dark {
+                background-color: #212529 !important; /* Темний фон для заголовка */
+            }
+            .alert {
+                color: white; /* Колір тексту для alert */
+            }
+            .list-group-item {
+                background-color: #495057; /* Змінити фон для елементів списку */
+                color: white; /* Змінити текст на білий */
+            }
+            .table {
+                background-color: #495057; /* Змінити фон таблиці */
+                color: white; /* Змінити текст на білий */
+            }
+            .form-control {
+                background-color: #6c757d; /* Змінити фон для форм */
+                color: white; /* Змінити текст на білий */
+            }
+            .form-control::placeholder {
+                color: #ffffff; /* Колір підказки в полях вводу */
+            }
+        {% else %}
+            body {
+                background-color: white;
+                color: black; /* Зміна кольору тексту для світлої теми */
+            }
+            .bg-dark {
+                background-color: #343a40 !important; /* Темний фон для заголовка */
+            }
+        {% endif %}
+    </style>
