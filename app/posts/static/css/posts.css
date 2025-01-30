@@ -1,0 +1,19 @@
+.myclass {
+    background-color: #bbff00; /* Fully opaque */
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.tag:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}

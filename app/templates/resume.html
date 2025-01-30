@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Резюме{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <section id="about" class="mb-5">
+    <h2 class="text-primary">Про себе</h2>
+    <p>
+      Я – розробник програмного забезпечення з досвідом у веб-розробці та створенні
+      масштабованих рішень. Маю глибокі знання в Python, Flask та інших сучасних
+      технологіях. Моя ціль — створювати ефективні та інноваційні рішення, які
+      покращують життя користувачів.
+    </p>
+    <img src="{{ url_for('static', filename='images/profile.jpg') }}" class="img-fluid rounded-circle" alt="Profile Image" width="150">
+  </section>
+
+  <section id="education" class="mb-5">
+    <h2 class="text-primary">Освіта</h2>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>Київський національний університет</strong> — Бакалавр комп'ютерних наук (2018-2022)
+      </li>
+      <li class="list-group-item">
+        <strong>Чеський технічний університет</strong> — Магістр програмної інженерії (2022-2024)
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills" class="mb-5">
+    <h2 class="text-primary">Навички</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group">
+          <li class="list-group-item">Програмування: Python, JavaScript, C++</li>
+          <li class="list-group-item">Фреймворки: Flask, Django, React</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-group">
+          <li class="list-group-item">Бази даних: MySQL, PostgreSQL, MongoDB</li>
+          <li class="list-group-item">Інструменти: Git, Docker, Jenkins</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="text-primary">Досвід роботи/Проекти</h2>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Проект: Система управління замовленнями</h5>
+        <p class="card-text">
+          Розробив систему управління замовленнями для компанії, що надає логістичні
+          послуги. Використані технології: Python, Flask, PostgreSQL.
+        </p>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-body">
+        <h5 class="card-title">Проект: Веб-додаток для автоматизації процесів</h5>
+        <p class="card-text">
+          Створив веб-додаток для автоматизації бізнес-процесів у сфері маркетингу.
+          Використані технології: Django, React, MySQL.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

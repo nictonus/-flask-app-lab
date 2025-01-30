@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% block style %} {% endblock %}
+
+{% include "color_scheme.html" %}
+</head>
+<body>
+    <header class="bg-dark text-white p-3">
+        <div class="container">
+            <h1>Flask Application</h1>
+        </div>
+    </header>
+
+    {% with msg = get_flashed_messages(with_categories=True) %}
+    {% if msg %}
+        {% for category, message in msg %}
+            <div class="alert alert-{{ category }} alert-dismissible" role="alert">
+                <strong>{{ message }}</strong>
+                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    {% include "navigation.html" %}
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% include "footer.html" %}
+    <script src="{{url_for('static', filename='Js/jquery.js')}}"></script>
+    <script src="{{url_for('static', filename='Js/bootstrap.js')}}"></script>
+</body>
+</html>
